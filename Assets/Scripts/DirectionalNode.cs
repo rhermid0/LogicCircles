@@ -8,7 +8,7 @@ public class DirectionalNode : MonoBehaviour
     public Sprite left;
     public Sprite right;
     public string current;
-    SpriteRenderer sr;
+    private SpriteRenderer sr;
 
     // Start is called before the first frame update
     void Start()
@@ -17,27 +17,22 @@ public class DirectionalNode : MonoBehaviour
         SwitchSprite();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void SwitchSprite()
     {
         if(current == "left")
         {
-            Debug.Log("Choosing left sprite!");
+            print("Choosing left sprite!");
             sr.sprite = left;
         }
         else if(current == "right")
         {
-            Debug.Log("Choosing right sprite!");
+            print("Choosing right sprite!");
             sr.sprite = right;
         }
         else
         {
-            Debug.Log("Choosing sprite none!");
+            print("Choosing sprite none!");
             sr.sprite = none;
         }
     }
